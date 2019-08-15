@@ -79,7 +79,7 @@ export default {
                 return new Promise((resolve, reject) => {
                     // eslint-disable-next-line no-undef
                     if (process.env.NODE_ENV === 'production') {
-                        url = `example-data-api/${url}.json`;
+                        url = `doc-dev-data-api/${url}.json`;
                     }
                     axios.get(url, {
                         query: params

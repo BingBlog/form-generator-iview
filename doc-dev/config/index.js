@@ -28,11 +28,15 @@ export default {
 
     menuList: [
         {
-            label: 'home',
-            name: '/home'
+            label: 'Form Generator',
+            name: '/form-generator-example'
         },
         {
-            label: 'document',
+            label: 'Control Generator',
+            name: 'control-generator-example'
+        },
+        {
+            label: 'Document',
             name: '/doc'
         }
     ]

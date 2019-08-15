@@ -16,12 +16,12 @@ module.exports = merge(webpackBaseConfig, {
 
     // 入口
     entry: {
-        main: path.resolve(__dirname, '../example/main'),
+        main: path.resolve(__dirname, '../doc-dev/main'),
         vendors: ['vue', 'iview']
     },
     // 输出
     output: {
-        path: path.resolve(__dirname, '../example/dist'),
+        path: path.resolve(__dirname, '../doc-dev/dist'),
         publicPath: '',
         filename: '[name].js',
         chunkFilename: '[name].chunk.js'
@@ -29,8 +29,8 @@ module.exports = merge(webpackBaseConfig, {
     plugins: [
         new HtmlWebpackPlugin({
             inject: true,
-            filename: path.resolve(__dirname, '../example/dist/index.html'),
-            template: path.resolve(__dirname, '../example/index.html')
+            filename: path.resolve(__dirname, '../doc-dev/dist/index.html'),
+            template: path.resolve(__dirname, '../doc-dev/index.html')
         }),
         new CleanWebpackPlugin()
     ]

@@ -5,20 +5,26 @@
 
 import Main from '../components/main';
 
-import home from '../page/home';
+import formGeneratorExample from '../page/form-generator-example';
+import controlGeneratorExample from '../page/control-generator-example';
 import doc from '../page/doc';
 
 export default [
     {
         path: '/',
         name: 'home',
-        redirect: '/home',
+        redirect: '/form-generator-example',
         component: Main,
         children: [
             {
-                path: '/home',
+                path: '/form-generator-example',
                 name: 'data',
-                component: home
+                component: formGeneratorExample
+            },
+            {
+                path: '/control-generator-example',
+                name: 'data',
+                component: controlGeneratorExample
             },
             {
                 path: '/doc',
