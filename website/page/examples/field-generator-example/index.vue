@@ -13,7 +13,7 @@
                 <template
                     v-if="column.slot !== 'action'"
                 >
-                    <ControlGenerator
+                    <FieldGenerator
                         v-if="editModel.index === index"
                         :key="column.slot"
                         :field="column.editControlConfig"

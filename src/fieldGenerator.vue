@@ -3,9 +3,10 @@
         :is="getFieldCom(field.type)"
         :class="classes"
         :field="field"
+        :inline="inline"
         :form-model="formModel"
         :api-base="apiBase"
-        :size="size"
+        :size="field.size || size"
         :request-interceptor="requestInterceptor"
         @on-change="onFieldChange"
         @submit="handleSubmit"
@@ -15,7 +16,7 @@
 import fieldComponents from './utils/fieldsLoader.js';
 import {classPrifix} from './utils/const';
 export default {
-    name: 'ControlGenerator',
+    name: 'FieldGenerator',
     components: {
         ...fieldComponents
     },
@@ -43,6 +44,10 @@ export default {
             default() {
                 return 'default';
             }
+        },
+        inline: {
+            type: Boolean,
+            default: false
         },
         apiBase: {
             type: String,
